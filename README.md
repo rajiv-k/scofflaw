@@ -2,6 +2,14 @@
 
 A simple policy engine!
 
+
+#### test
+
+```sh
+$ pytest
+```
+
+
 #### run
 
 ```sh

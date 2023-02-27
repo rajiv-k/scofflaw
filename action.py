@@ -9,7 +9,7 @@ class Action(ABC):
         return f"Action(...)"
 
     @abstractmethod
-    def do(self, *args, **kwargs):
+    def do(self, event):
         ...
 
 class Noop(Action):
@@ -20,7 +20,7 @@ class Noop(Action):
     def __str__(self):
         return f"Noop(...)"
 
-    def do(self, *args, **kwargs):
+    def do(self, event):
         logger.debug(f"{self.ctx}: No change required")
 
 class ScaleUp(Action):
